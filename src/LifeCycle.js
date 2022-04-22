@@ -7,22 +7,27 @@ function LifeCycle() {
 
 	// --- Compononent added to DOM ---
 	useEffect(() => {
+		// The first parameter is a function that is executed when 
+		// this component is mounted
 		console.log('1. Component Did Mount!')
+
+		// Return a function that is executed when this
+			// Component is removed from DOM
 		return () => {
-			// Component removed from DOM
+			
 			console.log('LifeCycle is removed DOM')
 		}
-	}, [])
+	}, []) // The second parameter is an array that lists values that trigger an update
 
 	// --- Each update ---
 	useEffect(() => {
 		console.log('2. Component did update')
-	})
+	}) // No array triggers every update
 
 	// --- When *count* changes ---
 	useEffect(() => {
 		console.log('3. Count Updated')
-	}, [count])
+	}, [count]) // Includes count, so only triggers when count is updated
 
   return (
     <div className="App">

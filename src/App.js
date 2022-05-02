@@ -2,23 +2,27 @@ import './App.css';
 import React, { useState } from 'react'
 import LifeCycle from './LifeCycle';
 import Classy from './Classy';
+import Ready from './Ready';
+import Colors from './Colors';
 
 function App() {
   const [ show, setShow ] = useState(true)
   
   return (
     <div className="App">
-
-
       <button
         onClick={() => setShow(!show)}
-      >{show ? "Hide" : "Hide"}</button>
+      >{show ? "Hide" : "Show"}</button>
 
-      {show ? 
+      {
+      show ? 
         <>
           <LifeCycle />
-          {/* <Classy /> */}
-        </> : null}
+          <Classy />
+          <Ready />
+          <Colors />
+        </> : null
+      }
       
     </div>
   );

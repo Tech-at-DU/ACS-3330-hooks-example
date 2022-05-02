@@ -10,12 +10,10 @@ function LifeCycle() {
 		// The first parameter is a function that is executed when 
 		// this component is mounted
 		console.log('1. Component Did Mount!')
-
 		// Return a function that is executed when this
-			// Component is removed from DOM
+		// Component is removed from DOM
 		return () => {
-			
-			console.log('LifeCycle is removed DOM')
+			console.log('4. Component is removed DOM')
 		}
 	}, []) // The second parameter is an array that lists values that trigger an update
 
@@ -40,6 +38,10 @@ function LifeCycle() {
 			<button
 				onClick={() => setRandom(Math.floor(Math.random() * 9) + 1)}
 			>Randomize</button>
+
+			<button
+				onClick={() => setCount(0)}
+			>Reset</button>
     </div>
   );
 }

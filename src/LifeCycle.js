@@ -6,6 +6,7 @@ function LifeCycle() {
 	const [random, setRandom] = useState(1)
 
 	// --- Compononent added to DOM ---
+
 	useEffect(() => {
 		// The first parameter is a function that is executed when 
 		// this component is mounted

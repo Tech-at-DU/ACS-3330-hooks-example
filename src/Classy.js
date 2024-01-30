@@ -3,9 +3,12 @@ import { Component, useState, useEffect } from 'react'
 class Classy extends Component {
 	constructor(props) {
 		super(props)
+		
 		this.state = {
-			count: 0
+			count: 0, 
+			name: 'abcdef'
 		}
+
 	}
 
 	// Lifecycle methods

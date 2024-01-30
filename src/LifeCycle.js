@@ -27,6 +27,7 @@ function LifeCycle() {
 		console.log('3. Count Updated')
 	}, [count]) // Includes count, so only triggers when count is updated
 
+	console.log('!!! LifeCycle rendering !!!')
   return (
     <div className="App">
       <h1>-- Hooky --</h1>
@@ -47,3 +48,6 @@ function LifeCycle() {
 }
 
 export default LifeCycle;
+
+
+

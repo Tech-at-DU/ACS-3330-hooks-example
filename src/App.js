@@ -4,6 +4,7 @@ import LifeCycle from './LifeCycle';
 import Classy from './Classy';
 import Ready from './Ready';
 import Colors from './Colors';
+import Didload from './Didload'
 
 function App() {
   const [ show, setShow ] = useState(true)
@@ -13,17 +14,19 @@ function App() {
       <button
         onClick={() => setShow(!show)}
       >{show ? "Hide" : "Show"}</button>
-
-      {
-      show ? 
+      { show ? 
         <>
-          <LifeCycle />
-          <Classy />
+          {/* Class lifecyle methods */}
+          {/* <Classy /> */}
+         
+          {/* Hooks lifecycle */}
+          {/* <LifeCycle /> */}
+          
           <Ready />
-          <Colors />
+          
+          {/* <Colors />  */}
         </> : null
       }
-      
     </div>
   );
 }

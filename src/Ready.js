@@ -2,18 +2,27 @@ import React, { useState, useEffect } from 'react'
 
 // https://overreacted.io/a-complete-guide-to-useeffect/
 
-
 function Ready() {
 	const [showMessage, setShowMessage] = useState(false)
 	const [w, setW] = useState(0)
 	const [h, setH] = useState(0)
 	const [count, setCount] = useState(0)
 
+
 	useEffect(() => {
 		setTimeout(() => {
 			setShowMessage(true)
 		}, 2000)
 	}, [])
+
+	useEffect(() => {
+		const t = setInterval(() => {
+			setCount(count + 1)
+			console.log("counting")
+		}, 1000)
+		return () => clearInterval(t)
+	}, [count])
+
 
 	useEffect(() => {
 		function onResize(e) {
@@ -24,14 +33,6 @@ function Ready() {
 		window.addEventListener('resize', onResize)
 		return () => window.removeEventListener('resize', onResize)
 	}, [])
-
-	useEffect(() => {
-		const t = setInterval(() => {
-			setCount(count + 1)
-			console.log("counting")
-		}, 1000)
-		return () => clearInterval(t)
-	}, [count])
 
 
 	if (!showMessage) {

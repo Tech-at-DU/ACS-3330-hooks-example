@@ -11,26 +11,23 @@ class Classy extends Component {
 	// Lifecycle methods
 	componentDidMount() {
 		// When the component is added to the DOM
-		// add timer
-		console.log('Component did mount')
+		console.log('Classy Component did mount')
 	}
 
 	componentWillUnmount() {
 		// Component will be removed from the DOM
-		// clear timer
-		console.log('Component will unmount')
+		console.log('Classy Component will unmount')
 	}
 
 	componentDidUpdate() {
 		// Each time component renders
-		// ...
-		console.log('Component did update')
+		console.log('Classy Component did update')
 	}
 
 	render() {
-
+		console.log('!!! Classy Renders !!!')
 		return (
-			<div>
+			<div style={{ border: '1px solid'}}>
 				<p>-- Classy --</p>
 				<h1 
 					data-id={this.props.id}

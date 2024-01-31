@@ -20,11 +20,11 @@ function App() {
           {/* <Classy /> */}
          
           {/* Hooks lifecycle */}
-          <LifeCycle />
+          {/* <LifeCycle /> */}
           
-          {/* <Ready /> */}
+          <Ready />
           
-          {/* <Colors />  */}
+          <Colors /> 
         </> : null
       }
     </div>
